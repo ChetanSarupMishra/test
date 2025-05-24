@@ -1,6 +1,21 @@
+# .github/workflows/main.yml
+name: Email Address Action
+
+on:
+  workflow_dispatch: # Allows manual triggering from the GitHub UI
+  push:
+    branches:
+      - main # Triggers on pushes to the main branch
+
 jobs:
-  test:
+  build:
+    runs-on: ubuntu-latest
+
     steps:
-        24f3002739@ds.study.iitm.ac.in
-        name: 24f3002739@ds.study.iitm.ac.in
-        run: echo "Hello, world!"
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: 24f3002739@ds.study.iitm.ac.in
+      run: |
+        echo "Hello from the GitHub Action!"
+        echo "This step includes the specified email address in its name."
